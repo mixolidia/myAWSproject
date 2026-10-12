@@ -1,2 +1,2 @@
 print("Hello, GitHub!")
-print("My first Git project")
+print("My first AWS Git project")
