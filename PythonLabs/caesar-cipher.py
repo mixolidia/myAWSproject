@@ -1,8 +1,8 @@
 # Lab124: Using Functions to Implement a Caesar Cipher
 # ex.1
 def getDoubleAlphabet(alphabet):
-    doubleAlphabet = alphabet + alphabet
-    return doubleAlphabet
+    DoubleAlphabet = alphabet + alphabet
+    return DoubleAlphabet
 
 # ex.2
 def getMessage():
@@ -11,7 +11,7 @@ def getMessage():
 
 # ex.3
 def getCipherKey():
-    shiftAmount = input( "Please enter a key (whole number from 1-25): ")
+    shiftAmount = input("Please enter a key (whole number from 1-25): ")
     return shiftAmount
 
 # ex.4
@@ -29,12 +29,14 @@ def encryptMessage(message, cipherKey, alphabet):
 
     return encryptedMessage
 
+# ex.5
 def decryptMessage(message, cipherKey, alphabet):
     decryptKey = -1 * int(cipherKey)
     return encryptMessage(message, decryptKey, alphabet)
 
+# ex.6
 def runCaesarCipherProgram():
-    myAlphabet="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    myAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     print(f'Alphabet: {myAlphabet}')
     myAlphabet2 = getDoubleAlphabet(myAlphabet)
     print(f'Alphabet2: {myAlphabet2}')
@@ -45,6 +47,6 @@ def runCaesarCipherProgram():
     myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphabet2)
     print(f'Encrypted Message: {myEncryptedMessage}')
     myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey, myAlphabet2)
-    print(f'Decypted Message: {myDecryptedMessage}')
+    print(f'Decrypted Message: {myDecryptedMessage}')
 
 runCaesarCipherProgram()
